@@ -36,7 +36,7 @@ jobs:
     - name: 运行医院联系程序（限时1小时）
       run: |
         echo "开始运行医院联系程序..." 
-        timeout 3600s python github_daily_run.py || echo "程序运行1小时结束"
+        timeout 7200s python github_daily_run.py || echo "程序运行2小时结束"
         
     - name: 保存进度数据 
       uses: actions/upload-artifact@v4  # 关键修复：v3升级到v4
